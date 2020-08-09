@@ -13,10 +13,10 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='footer_left'>
-                <img src='' alt='' />
+                <img className='footer_albumLogo' src='https://upload.wikimedia.org/wikipedia/en/f/fc/Sia_Cheap_Thrills.png' alt='' />
                 <div className='footer_songInfo'>
-                    <h4>Yeah!</h4>
-                    <p>Usher</p>
+                    <h4>Cheap Thrills</h4>
+                    <p>Sia</p>
                 </div>
             </div>
 
