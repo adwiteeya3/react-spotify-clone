@@ -1,0 +1,9 @@
+.sidebarOption {
+    color: grey;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sidebarOption:hover {
+    color: white;
+}
