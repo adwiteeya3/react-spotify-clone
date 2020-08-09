@@ -4,6 +4,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import { Avatar } from '@material-ui/core';
 
 function Header() {
+    const [{ user }, dispatch ] = useStateValue();
+
     return (
         <div className='header'>
             <div className='header_left'>
