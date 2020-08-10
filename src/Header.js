@@ -3,8 +3,9 @@ import './Header.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { Avatar } from '@material-ui/core';
 import { useDataLayerValue} from './DataLayer';
+import { useEffect } from "react";
 
-function Header() {
+function Header({ spotify }) {
     const [{ user }, dispatch ] = useDataLayerValue();
 
     return (
@@ -12,13 +13,13 @@ function Header() {
             <div className='header_left'>
             <SearchIcon />
             <input 
-                placeholder='Search for Artists, Songs, others...'
-                type='type'
+                placeholder='Search for Artists, Songs, or Podcasts'
+                type='text'
             />
             </div>
 
             <div className='header_right'>
-                <Avatar src={user?.images[0]?.url} alt='AD' />
+                <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
                 <h4>{user?.display_name}</h4>
 
             </div>
