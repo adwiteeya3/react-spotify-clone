@@ -1,8 +1,10 @@
 import React from 'react';
 import './Body.css';
 import Header from './Header';
+import { useDataLayerValue } from './DataLayer';
 
 function Body({ spotify }) {
+    const [{ discover_weekly }, dispatch]= useDataLayerValue();
     return (
         <div className='body'>
             <Header spotify={spotify}/>
@@ -12,7 +14,7 @@ function Body({ spotify }) {
                 <div className='body_infoText'>
                     <strong>PLAYLIST</strong>
                     <h2>Discover Weekly</h2>
-                    <p> Discription..</p>
+                    <p> {discover_weekly?.description} </p>
                 </div>
             </div>
         </div>

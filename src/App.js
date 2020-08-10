@@ -39,9 +39,15 @@ function App() {
         dispatch ({
           type: 'SET_PLAYLISTS',
           playlists: playlists,
-        })
-      })
+        });
+      });
 
+      spotify.getPlaylist('').then(response => 
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+        )
     }
     
     //console.log("I have a token: ", token);
